@@ -42,11 +42,7 @@ class LightCoreDataStore: LightStoreProtocol {
         let managedLight = lights.first as! NSManagedObject
         managedLight.setValue(light.isOn, forKey: "isOn")
         
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
+        save()
     }
     
     func insertInitialIntoStore() {
@@ -57,11 +53,15 @@ class LightCoreDataStore: LightStoreProtocol {
             lightCD.setValue(light.division, forKey: "division")
             lightCD.setValue(light.isOn, forKey: "isOn")
             
-            do {
-                try managedContext.save()
-            } catch let error as NSError {
-                print("Could not save. \(error), \(error.userInfo)")
-            }
+            save()
+        }
+    }
+    
+    func save() {
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
         }
     }
 }
