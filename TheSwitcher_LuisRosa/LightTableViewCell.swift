@@ -8,20 +8,33 @@
 
 import UIKit
 
+protocol LightTableViewCellDelegate {
+    func lightDidSwitch(isOn: Bool, forIndex: Int)
+}
+
 class LightTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lightSwitch: UISwitch!
     @IBOutlet weak var roomLabel: UILabel!
+    var index: Int?
+    var delegate: LightTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        lightSwitch.addTarget(self, action: #selector(self.stateChanged(switchState: )), for: UIControlEvents.valueChanged)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @objc func stateChanged(switchState: UISwitch) {
+        guard let index = self.index else {
+            return
+        }
+        self.delegate?.lightDidSwitch(isOn: switchState.isOn, forIndex: index)
     }
 
 }

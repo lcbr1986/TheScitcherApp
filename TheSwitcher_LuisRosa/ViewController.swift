@@ -18,12 +18,6 @@ class ViewController: UIViewController {
         self.lights = [Light(divisionName: "Kitchen"), Light(divisionName: "Living room", isOn: true), Light(divisionName: "Master bedroom"), Light(divisionName: "Guest’s bedroom")]
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
 extension ViewController: UITableViewDataSource {
@@ -33,13 +27,19 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lightCell", for: indexPath) as! LightTableViewCell
+        cell.index = indexPath.row
         let light = lights[indexPath.row]
         cell.roomLabel.text = light.division
         cell.lightSwitch.isOn = light.isOn
+        cell.delegate = self
         
         return cell
     }
-    
-    
+}
+
+extension ViewController: LightTableViewCellDelegate {
+    func lightDidSwitch(isOn: Bool, forIndex: Int) {
+        lights[forIndex].isOn = isOn
+    }
 }
 
