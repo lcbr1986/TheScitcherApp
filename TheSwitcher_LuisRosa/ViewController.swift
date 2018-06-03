@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var lights:[Light] = []
+    
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.lights = [Light(divisionName: "Kitchen"), Light(divisionName: "Living room", isOn: true), Light(divisionName: "Master bedroom"), Light(divisionName: "Guest’s bedroom")]
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +24,22 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lights.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lightCell", for: indexPath) as! LightTableViewCell
+        let light = lights[indexPath.row]
+        cell.roomLabel.text = light.division
+        cell.lightSwitch.isOn = light.isOn
+        
+        return cell
+    }
+    
+    
 }
 

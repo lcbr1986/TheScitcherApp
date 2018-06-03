@@ -13,6 +13,8 @@
 		B23C070220C4395C007A1175 /* TheSwitcher_LuisRosa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B23C070020C4395C007A1175 /* TheSwitcher_LuisRosa.xcdatamodeld */; };
 		B23C070420C4395E007A1175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23C070320C4395E007A1175 /* Assets.xcassets */; };
 		B23C070720C4395E007A1175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23C070520C4395E007A1175 /* LaunchScreen.storyboard */; };
+		B23C070F20C44289007A1175 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C070E20C44289007A1175 /* Light.swift */; };
+		B23C071120C44387007A1175 /* LightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C071020C44387007A1175 /* LightTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B23C070320C4395E007A1175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B23C070620C4395E007A1175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B23C070820C4395E007A1175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B23C070E20C44289007A1175 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		B23C071020C44387007A1175 /* LightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				B23C06F920C4395C007A1175 /* AppDelegate.swift */,
 				B23C06FB20C4395C007A1175 /* ViewController.swift */,
+				B23C070E20C44289007A1175 /* Light.swift */,
+				B23C071020C44387007A1175 /* LightTableViewCell.swift */,
 				B23C06FD20C4395C007A1175 /* Main.storyboard */,
 				B23C070320C4395E007A1175 /* Assets.xcassets */,
 				B23C070520C4395E007A1175 /* LaunchScreen.storyboard */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23C071120C44387007A1175 /* LightTableViewCell.swift in Sources */,
 				B23C06FC20C4395C007A1175 /* ViewController.swift in Sources */,
 				B23C06FA20C4395C007A1175 /* AppDelegate.swift in Sources */,
+				B23C070F20C44289007A1175 /* Light.swift in Sources */,
 				B23C070220C4395C007A1175 /* TheSwitcher_LuisRosa.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
