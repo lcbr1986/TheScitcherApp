@@ -15,6 +15,7 @@
 		B23C070720C4395E007A1175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23C070520C4395E007A1175 /* LaunchScreen.storyboard */; };
 		B23C070F20C44289007A1175 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C070E20C44289007A1175 /* Light.swift */; };
 		B23C071120C44387007A1175 /* LightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C071020C44387007A1175 /* LightTableViewCell.swift */; };
+		B23C071320C459BB007A1175 /* LightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C071220C459BB007A1175 /* LightDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B23C070820C4395E007A1175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B23C070E20C44289007A1175 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		B23C071020C44387007A1175 /* LightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTableViewCell.swift; sourceTree = "<group>"; };
+		B23C071220C459BB007A1175 /* LightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				B23C06F920C4395C007A1175 /* AppDelegate.swift */,
-				B23C06FB20C4395C007A1175 /* ViewController.swift */,
-				B23C070E20C44289007A1175 /* Light.swift */,
-				B23C071020C44387007A1175 /* LightTableViewCell.swift */,
+				B23C071420C45FBD007A1175 /* ViewControllers */,
+				B23C071520C45FCB007A1175 /* Models */,
+				B23C071620C45FD3007A1175 /* Views */,
 				B23C06FD20C4395C007A1175 /* Main.storyboard */,
 				B23C070320C4395E007A1175 /* Assets.xcassets */,
 				B23C070520C4395E007A1175 /* LaunchScreen.storyboard */,
@@ -71,6 +73,31 @@
 				B23C070020C4395C007A1175 /* TheSwitcher_LuisRosa.xcdatamodeld */,
 			);
 			path = TheSwitcher_LuisRosa;
+			sourceTree = "<group>";
+		};
+		B23C071420C45FBD007A1175 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B23C06FB20C4395C007A1175 /* ViewController.swift */,
+				B23C071220C459BB007A1175 /* LightDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B23C071520C45FCB007A1175 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B23C070E20C44289007A1175 /* Light.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B23C071620C45FD3007A1175 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B23C071020C44387007A1175 /* LightTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +175,7 @@
 				B23C06FC20C4395C007A1175 /* ViewController.swift in Sources */,
 				B23C06FA20C4395C007A1175 /* AppDelegate.swift in Sources */,
 				B23C070F20C44289007A1175 /* Light.swift in Sources */,
+				B23C071320C459BB007A1175 /* LightDetailViewController.swift in Sources */,
 				B23C070220C4395C007A1175 /* TheSwitcher_LuisRosa.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

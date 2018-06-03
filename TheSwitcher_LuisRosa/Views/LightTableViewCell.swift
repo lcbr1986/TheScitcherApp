@@ -24,12 +24,6 @@ class LightTableViewCell: UITableViewCell {
         lightSwitch.addTarget(self, action: #selector(self.stateChanged(switchState: )), for: UIControlEvents.valueChanged)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     @objc func stateChanged(switchState: UISwitch) {
         guard let index = self.index else {
             return

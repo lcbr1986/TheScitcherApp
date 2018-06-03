@@ -15,9 +15,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lights = [Light(divisionName: "Kitchen"), Light(divisionName: "Living room", isOn: true), Light(divisionName: "Master bedroom"), Light(divisionName: "Guest’s bedroom")]
+        self.title = "Switcher App"
+        self.lights = [Light(divisionName: "Kitchen"), Light(divisionName: "Living room"), Light(divisionName: "Master bedroom"), Light(divisionName: "Guest’s bedroom")]
     }
 
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            backItem.tintColor = .white
+            navigationItem.backBarButtonItem = backItem
+            
+            guard let indexPath = tableView.indexPathForSelectedRow else {
+                return
+            }
+            let light = lights[indexPath.row]
+            let detailViewController = segue.destination as! LightDetailViewController
+            detailViewController.light = light
+        }
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -34,6 +53,12 @@ extension ViewController: UITableViewDataSource {
         cell.delegate = self
         
         return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
