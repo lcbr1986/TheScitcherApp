@@ -11,12 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     var lights:[Light] = []
+    let lightStore: LightStoreProtocol = LightCoreDataStore()
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Switcher App"
-        self.lights = [Light(divisionName: "Kitchen"), Light(divisionName: "Living room"), Light(divisionName: "Master bedroom"), Light(divisionName: "Guest’s bedroom")]
+        
+        self.lights = lightStore.getLights()
     }
 
     // MARK: - Navigation
@@ -64,7 +66,9 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: LightTableViewCellDelegate {
     func lightDidSwitch(isOn: Bool, forIndex: Int) {
-        lights[forIndex].isOn = isOn
+        var updatedLight = lights[forIndex]
+        updatedLight.isOn = isOn
+        lightStore.updateLight(light: updatedLight)
     }
 }
 

@@ -16,6 +16,8 @@
 		B23C070F20C44289007A1175 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C070E20C44289007A1175 /* Light.swift */; };
 		B23C071120C44387007A1175 /* LightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C071020C44387007A1175 /* LightTableViewCell.swift */; };
 		B23C071320C459BB007A1175 /* LightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C071220C459BB007A1175 /* LightDetailViewController.swift */; };
+		B23C071820C47593007A1175 /* LighStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C071720C47593007A1175 /* LighStoreProtocol.swift */; };
+		B23C071A20C478FB007A1175 /* LightCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23C071920C478FB007A1175 /* LightCoreDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		B23C070E20C44289007A1175 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		B23C071020C44387007A1175 /* LightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTableViewCell.swift; sourceTree = "<group>"; };
 		B23C071220C459BB007A1175 /* LightDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDetailViewController.swift; sourceTree = "<group>"; };
+		B23C071720C47593007A1175 /* LighStoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LighStoreProtocol.swift; sourceTree = "<group>"; };
+		B23C071920C478FB007A1175 /* LightCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCoreDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				B23C06F920C4395C007A1175 /* AppDelegate.swift */,
+				B23C071B20C4A17D007A1175 /* DataStore */,
 				B23C071420C45FBD007A1175 /* ViewControllers */,
 				B23C071520C45FCB007A1175 /* Models */,
 				B23C071620C45FD3007A1175 /* Views */,
@@ -98,6 +103,15 @@
 				B23C071020C44387007A1175 /* LightTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B23C071B20C4A17D007A1175 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				B23C071720C47593007A1175 /* LighStoreProtocol.swift */,
+				B23C071920C478FB007A1175 /* LightCoreDataStore.swift */,
+			);
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +188,11 @@
 				B23C071120C44387007A1175 /* LightTableViewCell.swift in Sources */,
 				B23C06FC20C4395C007A1175 /* ViewController.swift in Sources */,
 				B23C06FA20C4395C007A1175 /* AppDelegate.swift in Sources */,
+				B23C071A20C478FB007A1175 /* LightCoreDataStore.swift in Sources */,
 				B23C070F20C44289007A1175 /* Light.swift in Sources */,
 				B23C071320C459BB007A1175 /* LightDetailViewController.swift in Sources */,
 				B23C070220C4395C007A1175 /* TheSwitcher_LuisRosa.xcdatamodeld in Sources */,
+				B23C071820C47593007A1175 /* LighStoreProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
